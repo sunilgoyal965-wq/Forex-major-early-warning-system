@@ -115,7 +115,7 @@ def send_telegram(message):
         data={"chat_id": TELEGRAM_CHAT_ID, "text": message},
         timeout=30,
     )
-    r.raise_for_status()
+    print("Telegram response:", r.text); r.raise_for_status()
 
 def main():
     results = []
